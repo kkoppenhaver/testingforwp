@@ -6,48 +6,54 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `Testing for WP`,
+    // Default title of the page
+    siteTitleAlt: `Testing for WP`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Testing for WP`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://testingforwp.com`,
+    // Used for SEO
+    siteDescription: `The best resource online for learning about testing your WordPress code.`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@kkoppenhaver`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        blogPath: '/posts',
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `Get Started`,
+            slug: `/get-started`,
           },
           {
-            title: `About`,
-            slug: `/about`,
+            title: `All Posts`,
+            slug: `/posts`,
           },
         ],
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            url: `https://twitter.com/kkoppenhaver`,
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Testing for WP`,
+        short_name: `Testing for WP`,
+        description: `The best resource online for learning about testing your WordPress code.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
