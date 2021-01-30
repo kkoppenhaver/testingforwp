@@ -6,3 +6,24 @@ slug: "/get-started"
 Welcome!
 
 If you're ready to get your testing infrastructure set up and run your very first test in WordPress, you're in the right place.
+
+## Set up WordPress locally
+
+However you choose to set up WordPress in your local environment, you need to have some sort of local setup. There are tons of great options from [Docker](https://10up.github.io/wp-local-docker-docs/) to [Local by Flywheel](https://localwp.com/) to [Laravel Homestead](https://laravel.com/docs/8.x/homestead) and many more...
+
+But what's important is you have some sort of local environment where you can test your changes and quickly run your tests. It's also important that you're able to access this environment via the command line, so that PHPUnit works as expected. 
+
+## Composer, PHPUnit and WP-CLI
+As part of the setup process, we'll need to install just a couple of things that our workflow will depend on. [Composer](https://getcomposer.org/) is a package manager for PHP which will make installing the other packages that we need much easier. [PHPUnit](https://phpunit.de/) is the actual testing framework that we'll be using to run our unit tests. And WP-CLI is a command line tool that lets you do many of the same tasks that you'd normally do in the WordPress admin area through the command line. This makes switching themes, running updates on lots of posts, and so much more quicker and easier if you're already in a command line environment (which is where we'll be much of the time).
+
+Once you've got all of these installed in your local environment, you're ready to move onto the fun part: setting up the tests.
+
+## Setting up a theme testing environment
+
+## Setting up a plugin testing environment
+
+## Did you get stuck or find something that could be improved?
+I'm always making Testing for WP better, but if you've found something that could be made more clear or improved on, please head over to GitHub and [open an issue](https://github.com/kkoppenhaver/testingforwp/issues) letting me know what page you think needs a little more love and how you think it could be improved. If you have ideas for new test examples that you'd like to see on the site, that's a great place to tell me about those too. Thanks for your help!
+
+
+
